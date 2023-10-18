@@ -1,19 +1,22 @@
 /*
-change
-#edf2f4 - w
-#8D99AE - g
-#2B2D42 - b
-#EF233C - p
-#D90429 - r
+#191c79 - midnight blue
+#f9f9f9 - seasalt
+#edb431 - xanthous
+#62c370 - emerald
+#ef233c - pantone red
 */
 
 body{
-    background-color: #edf2f4;
+    background-color: #f9f9f9;
 }
 
 nav{
-    background-color: #8d99ae;
-    color: #d90429;
+    background-color: #191c79;
+    color: #edb431;
+}
+
+nav :hover{
+    color: #62c370;
 }
 
 ul{
@@ -32,9 +35,8 @@ li{
 }
     
 
-
 h1{
-    color: #2b2d42;
+    color: #191c79;
 }
 
 
