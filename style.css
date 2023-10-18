@@ -1,0 +1,41 @@
+/*
+change
+#edf2f4 - w
+#8D99AE - g
+#2B2D42 - b
+#EF233C - p
+#D90429 - r
+*/
+
+body{
+    background-color: #edf2f4;
+}
+
+nav{
+    background-color: #8d99ae;
+    color: #d90429;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: right;
+}
+
+li{
+    margin: 0 7%;
+}
+
+#name{
+    margin-right: 10%;
+    margin-left: 0;
+}
+    
+
+
+h1{
+    color: #2b2d42;
+}
+
+
+
