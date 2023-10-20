@@ -6,6 +6,10 @@
 #ef233c - pantone red
 */
 
+/*
+- add transition to projects to transform
+*/
+
 body{
     background-color: #f9f9f9;
 }
@@ -39,5 +43,12 @@ h1{
     color: #191c79;
 }
 
+.projects{
+    display: flex;
+    justify-content: center;
+}
 
-
+img{
+    height: 100px;
+    width: 100px;
+}

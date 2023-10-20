@@ -1,0 +1,63 @@
+body{
+    padding: 0;
+    margin: 0;
+    background:#f9f9f9;
+}
+
+.calcCase{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10%;
+    background-color: #62c370;
+    height: 22em;
+    width: 15em;
+    border-radius: 15px;
+}
+
+#calcScreen{
+    background-color: #ef233c;
+    color: #f9f9f9;
+    grid-column: 1 / -1;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+    padding-right: 5%;
+    margin: 4%;
+}
+
+#calcBody{
+    background-color: #62c370;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: minmax(60px, auto) repeat(5, 50px);
+}
+
+#calcBody > button{
+    background-color: #ef233c;
+    color: #f9f9f9;
+    border: 1px solid #f9f9f9;
+    font-size: 1rem;
+    border-radius: 50px;
+    margin: 3%;
+}
+
+.doubleBtn{
+   grid-column: span 2;
+}
+
+/*
+ - add hover for buttons
+*/
+
+/*
+#191c79 - midnight blue
+#f9f9f9 - seasalt
+#edb431 - xanthous
+#62c370 - emerald
+#ef233c - pantone red
+*/

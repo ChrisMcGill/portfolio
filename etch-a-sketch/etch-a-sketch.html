@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="etch-a-sketch.js" defer></script>
+    <link rel="stylesheet" href="etch-a-sketch.css">
+</head>
+<body>
+    <div>
+        <h1> Etch A Sketch</h1>
+    </div>
+    <div id="gridContainer">
+        <div id="sketchpad">
+            
+        </div>
+    </div>
+
+    <div id="buttonsContainer">
+        <div id="sizeContainer">
+            <input  id="resInput" type="range" min="2" max="100" step="1" value="16" onchange="makeSketchpad(this.value)"/>
+            <p id="resolution"></p>
+        </div>
+        <div id="colourContainer">
+            <button id="colourBtn" onclick="changeColour('black')">Black</button>
+        </div>
+        <div id="randomContainer">
+            <button id="randomBtn" onclick="changeColour('random')">Random!</button>
+        </div>
+        <div id="resetContainer">
+            <button id="resetBtn" onclick="resetPad()">Reset</button>
+        </div>
+    </div>
+
+</body>
+</html>
