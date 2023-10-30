@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch A Sketch</title>
     <script src="etch-a-sketch.js" defer></script>
     <link rel="stylesheet" href="etch-a-sketch.css">
 </head>
@@ -11,27 +11,29 @@
     <div>
         <h1> Etch A Sketch</h1>
     </div>
-    <div id="gridContainer">
-        <div id="sketchpad">
-            
+    <div id="side">
+        <div id="buttonsContainer">
+            <div id="sizeContainer">
+                <input  id="resInput" type="range" min="2" max="100" step="1" value="16" onchange="makeSketchpad(this.value)"/>
+                <p id="resolution"></p>
+            </div>
+            <div id="colourContainer">
+                <input id="inputR" type="range" min="0" max="255" step="1" value="0" onchange="setR(this.value)"/><p>R value</p>
+                <input id="inputG" type="range" min="0" max="255" step="1" value="0" onchange="setG(this.value)"/><p>G value</p>
+                <input id="inputB" type="range" min="0" max="255" step="1" value="0" onchange="setB(this.value)"/><p>B value</p>
+                <button id="colourBtn" onclick="changeColour()">Change colour</button>
+            </div>
+            <div id="randomContainer">
+                <button id="randomBtn" onclick="setRandom()">Random!</button>
+            </div>
+            <div id="resetContainer">
+                <button id="resetBtn" onclick="resetPad()">Reset</button>
+            </div>
+        </div>
+        <div id="gridContainer">
+            <div id="sketchpad">
+            </div>
         </div>
     </div>
-
-    <div id="buttonsContainer">
-        <div id="sizeContainer">
-            <input  id="resInput" type="range" min="2" max="100" step="1" value="16" onchange="makeSketchpad(this.value)"/>
-            <p id="resolution"></p>
-        </div>
-        <div id="colourContainer">
-            <button id="colourBtn" onclick="changeColour('black')">Black</button>
-        </div>
-        <div id="randomContainer">
-            <button id="randomBtn" onclick="changeColour('random')">Random!</button>
-        </div>
-        <div id="resetContainer">
-            <button id="resetBtn" onclick="resetPad()">Reset</button>
-        </div>
-    </div>
-
-</body>
+    </body>
 </html>

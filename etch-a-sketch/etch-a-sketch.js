@@ -1,9 +1,10 @@
-
-let gridSize = 16;
+let gridSize = 0;
 let sketchColour = "rgb(0, 0 ,0)";
+let sketchR = 0;
+let sketchG = 0;
+let sketchB = 0;
+
 //set the number that can be used as an RGB value
-
-
 function makeSketchpad(gridSize){
     let sketchpad = document.querySelector('#sketchpad');
     let cells = document.querySelectorAll('.gridDiv');
@@ -20,15 +21,10 @@ function makeSketchpad(gridSize){
     };
 };
 
-function changeSize(input) {
-    if ((input >=1) && (input <= 100)) { 
-        makeSketchpad(input);
-    } else { 
-        alert("Please select a value between 1 and 100");
-    };
+//workaround as previous method broke
+function setRandom(){
+    sketchColour = 'random';
 };
-//alert not working
-
 function draw(){
     if ((sketchColour === 'random')){
         this.style.backgroundColor = `rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`;
@@ -36,7 +32,6 @@ function draw(){
         this.style.backgroundColor = sketchColour;
     };
 };
-//wont change back to original colour
 
 //pixel display (grid h * grid w)
 const resolution = document.querySelector('#resolution');
@@ -46,13 +41,34 @@ resInput.addEventListener("input", (event) => {
     resolution.textContent = `Pixels: ${((resInput.value)*(resInput.value))}`;
 });
 
-function changeColour(choice){
-    sketchColour = choice;
+function changeColour(){
+    sketchColour = `rgb(${sketchR},${sketchG},${sketchB})`;;
 };
 
 function resetPad(){
     let cells = document.querySelectorAll('.gridDiv');
     cells.forEach((div) => div.style.backgroundColor = "rgb(222, 222, 222)");
+};
+
+//rgb slider functions
+function setR(){
+    let getR = document.querySelector('#inputR');
+    sketchR = getR.value;
+    colourShow();
+};
+function setG(){
+    let getG = document.querySelector('#inputG');
+    sketchG = getG.value;
+    colourShow();
+};
+function setB(){
+    let getB = document.querySelector('#inputB');
+    sketchB = getB.value;
+    colourShow();
+};
+function colourShow(){
+    const colourShow = document.querySelector('#colourBtn');
+    colourShow.style.backgroundColor = `rgb(${sketchR},${sketchG},${sketchB})`;
 };
 
 makeSketchpad(16);

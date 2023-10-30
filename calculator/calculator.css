@@ -1,3 +1,7 @@
+*{
+    zoom: 110%;
+}
+
 body{
     padding: 0;
     margin: 0;
@@ -44,6 +48,10 @@ body{
     font-size: 1rem;
     border-radius: 50px;
     margin: 3%;
+}
+
+#calcBody>button:hover{
+    background-color: #edb431;
 }
 
 .doubleBtn{
